@@ -1,0 +1,40 @@
+DB設計概要
+
+
+
+
+
+出品ID（shuppin_id）INT：主キー、オートインクリメント
+商品名（product_name）VARCHAR
+ジャンル（genre）VARCHAR
+
+消費期限（expiration）INT
+
+内容（content）VARCHAR
+価格（price）INT
+
+在庫数（stock）INT
+
+
+-------------自動取得----------------
+登録日時（registered_date）INT
+
+
+ ----------------------------------
+|～ログイン情報から取得～          |
+|                                  |
+|出品地（place）VARCHAR            |
+|受付曜日（reception_day）VARCHAR  |
+|出品者名（seller）VARCHAR         |                         |
+|                                  |
+ ----------------------------------
+
+
+
+
+
+
+
+SQLから日時をとる
+消費期限が切れたものについては消費者に表示させない
+切れそうなものは生産者に通知しセールを呼びかける切れたものは出品キャンセルの通知を出す
